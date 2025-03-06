@@ -10,7 +10,7 @@ import Root from './Components/Root/Root.jsx';
 import ErrorElement from './Components/ErrorElement/ErrorElement.jsx';
 import Home from './Components/Home/Home.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
-
+import BookDetail from './Components/BookDetail/BookDetail.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,6 +24,9 @@ const router = createBrowserRouter([
     },{
       path:"dashboard",
       element: <Dashboard></Dashboard>
+    },{
+      path:'book/:bookId'
+      ,element: <BookDetail></BookDetail>
     }]
   },
 ]);

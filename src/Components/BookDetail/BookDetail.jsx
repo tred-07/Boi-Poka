@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-const Book = ({book}) => {
+import { useParams } from 'react-router-dom';
+
+const BookDetail = () => {
+    const param=useParams()
+    console.log(param);
     return (
-<div className='w-[30%]'>
-<div className="card bg-base-100 w-96 shadow-sm ">
+        <div>
+{/* <div className="card bg-base-100 w-96 shadow-sm ">
   <figure>
     <img
       src={book.image} className='w-[250px] h-[250px]'
@@ -14,12 +17,11 @@ const Book = ({book}) => {
    <h2>By: {book.author}</h2>
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Buy Now</button>
-      <Link to={`/book/${book.bookId}`}>Detail</Link>
     </div>
   </div>
-</div>
+</div> */}
 </div>
     );
 };
 
-export default Book;
+export default BookDetail;
